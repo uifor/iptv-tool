@@ -7,11 +7,11 @@ services:
       - $HOME/epg:/htdocs/data
     # 默认端口 5678
     ports:
-      - "5678:80"
+      - "5678:5678"
     depends_on:
       - mysql
       - phpmyadmin
-    restart: unless-stopped 
+    restart: unless-stopped
 
   mysql:
     image: mysql:8.0
@@ -23,7 +23,7 @@ services:
       MYSQL_DATABASE: phpepg
       MYSQL_USER: phpepg
       MYSQL_PASSWORD: phpepg
-    restart: unless-stopped 
+    restart: unless-stopped
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
@@ -35,4 +35,4 @@ services:
       PMA_PORT: 3306
     depends_on:
       - mysql
-    restart: unless-stopped 
+    restart: unless-stopped

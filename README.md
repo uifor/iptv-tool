@@ -99,7 +99,7 @@ bash <(curl -Ls https://gcore.jsdelivr.net/gh/taksssss/iptv-tool@master/install.
 ### 手动部署
 ```bash
 docker run -d --name php-epg \
-  -p 5678:80 \
+  -p 5678:5678 \
   -v $HOME/epg:/htdocs/data \
   -e PHP_MEMORY_LIMIT=512M \
   -e ENABLE_FFMPEG=false \

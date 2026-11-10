@@ -2,8 +2,6 @@ name: Update Icon List
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [synciconlist]
 
 jobs:
   update-icon-list:

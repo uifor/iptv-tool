@@ -48,7 +48,7 @@ RUN apk --no-cache --update \
 # 复制 ./epg 文件夹内容到 /htdocs
 COPY ./epg /htdocs
 
-EXPOSE 80 443
+EXPOSE 5678 443
 
 ADD docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh

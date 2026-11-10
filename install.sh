@@ -194,7 +194,7 @@ start_container() {
     fi
 
     if [ "$mode" = "1" ]; then
-        PORT_ARGS="-p $HTTP_PORT:80"
+        PORT_ARGS="-p $HTTP_PORT:5678"
         [ -n "$HTTPS_PORT" ] && PORT_ARGS="$PORT_ARGS -p $HTTPS_PORT:443"
 
         docker_cmd run -d --name $CONTAINER_NAME \
